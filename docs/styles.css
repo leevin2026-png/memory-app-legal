@@ -1,0 +1,266 @@
+:root {
+  color-scheme: light;
+  --ink: #182329;
+  --muted: #6f8088;
+  --accent: #7893a2;
+  --accent-deep: #5d7885;
+  --accent-soft: #dfe8eb;
+  --paper: #f8faf9;
+  --line: rgba(103, 132, 145, 0.18);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+    "Hiragino Sans GB", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 88% 8%, rgba(153, 181, 193, 0.3), transparent 30rem),
+    linear-gradient(160deg, #ffffff, #edf2f3 68%, #e3ebed);
+  line-height: 1.75;
+}
+
+a {
+  color: var(--accent-deep);
+}
+
+.shell {
+  width: min(100% - 32px, 920px);
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px 0 18px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.mark {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 4px solid var(--accent);
+  border-radius: 9px;
+  box-shadow: 0 0 0 8px rgba(120, 147, 162, 0.13);
+  transform: rotate(45deg);
+}
+
+.mark::after {
+  position: absolute;
+  left: -3px;
+  top: 11px;
+  width: 28px;
+  height: 4px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.9);
+  content: "";
+  transform: rotate(-42deg);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+nav a,
+.language-link {
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 76px 0 52px;
+}
+
+.eyebrow {
+  display: block;
+  color: var(--accent-deep);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  max-width: 760px;
+  margin: 16px 0 18px;
+  font-size: clamp(44px, 8vw, 78px);
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+}
+
+.hero p {
+  max-width: 660px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding-bottom: 80px;
+}
+
+.card,
+.document {
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 24px 70px rgba(64, 88, 99, 0.11);
+  backdrop-filter: blur(18px);
+}
+
+.card {
+  min-height: 220px;
+  padding: 26px;
+  border-radius: 28px;
+  text-decoration: none;
+}
+
+.card small {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.card strong {
+  display: block;
+  margin: 18px 0 8px;
+  color: var(--ink);
+  font-size: 23px;
+}
+
+.card span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.document {
+  margin: 42px 0 72px;
+  padding: clamp(28px, 6vw, 62px);
+  border-radius: 38px;
+}
+
+.document-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.document-header h1 {
+  margin: 9px 0 0;
+  font-size: clamp(40px, 7vw, 64px);
+}
+
+.updated {
+  flex: none;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.notice {
+  margin: 30px 0;
+  padding: 18px 20px;
+  border-radius: 20px;
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+  font-size: 14px;
+}
+
+.document section {
+  padding: 19px 0;
+}
+
+.document h2 {
+  margin: 0 0 8px;
+  font-size: 21px;
+}
+
+.document p,
+.document li {
+  color: #46565e;
+}
+
+.document ul {
+  margin: 8px 0;
+  padding-left: 22px;
+}
+
+.english {
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid var(--line);
+}
+
+.contact {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 13px 18px;
+  border-radius: 999px;
+  color: white;
+  background: var(--accent-deep);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.site-footer {
+  padding: 0 0 42px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .document-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
