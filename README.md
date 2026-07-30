@@ -12,4 +12,4 @@ This repository publishes the static site from the `docs` directory on the `main
 
 Bundle ID: `com.story.mem.forever`
 
-Support: hapiant@163.com
+Support: leevin2026@gmail.com
